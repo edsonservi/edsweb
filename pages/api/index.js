@@ -9,7 +9,7 @@ export default function handler(req, res) {
     var nascimento = gerarData();
     var idade = calcularIdade(nascimento);
     var dataNascimento = nascimento.getDate().toString().padStart(2, '0') + "/" + (nascimento.getMonth() + 1).toString().padStart(2, '0') + "/" + nascimento.getFullYear();
-    var photo = nome.genero === 'feminino' ? `../../resource/female_face (${Math.floor(Math.random() * 299) + 1}).png` : `../../resource/male_face (${Math.floor(Math.random() * 299) + 1}).png`;
+    var photo = nome.genero === 'feminino' ? `https://raw.githubusercontent.com/edsonservi/edsweb/main/resource/faces/female_face%20(${Math.floor(Math.random() * 299) + 1}).png` : `https://raw.githubusercontent.com/edsonservi/edsweb/main/resource/faces/male_face%20(${Math.floor(Math.random() * 299) + 1}).png`;
 
     //CONTATO
     var mail = `${nome.nome.toLowerCase().replace(/ /g, '.')}_${nome.sobrenome.replace(/ /g, '.').toLowerCase()}@provedor.com`;
